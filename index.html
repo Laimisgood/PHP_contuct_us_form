@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Contact us form</title>
+</head>
+
+<body>
+    <?php if(isset($user_is_created)): ?>
+    <div class="alert alert-success" role="alert">
+        Request for feedback has been sent!
+  </div>
+
+  <?php endif; ?>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.php">Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="result.php?mode=result">Result</a>
+            </li>
+        </div>
+    </nav>
+    <div class="container">
+        <form action="index.php" method="post" enctype="multipart/form-data">
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Your first name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="surname" class="col-sm-2 col-form-label">Surname</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="surname" name="surname" placeholder="Your surname">
+                </div>
+            </div>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="m" value="m" checked>
+                            <label class="form-check-label" for="m">
+                                Male
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="f" value="f">
+                            <label class="form-check-label" for="f">
+                                Female
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="password" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Your password">
+                </div>
+            </div>
+            <div class="md-form">
+                <label for="form7">Message:</label>
+                <textarea id="form7" class="md-textarea form-control" rows="3"
+                    placeholder="Here you can leave your comments and wishes" name="message"></textarea>
+            </div>
+            </br>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile" name="image">
+                <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+            </br>
+            <div class="form-group">
+                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Feedback form</label>
+                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="feedback">
+                    <option selected>Choose...</option>
+                    <option value="w">WhatsApp</option>
+                    <option value="t">Telegram</option>
+                    <option value="v">Vk</option>
+                </select>
+                <div class="invalid-feedback">Example invalid custom select feedback</div>
+            </div>
+            <div class="form-group row">
+
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="condition" required>
+                        <label class="form-check-label" for="condition">
+                            <div class="col-sm-12">I accept the terms</div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-success" name="submit">Submit</button>
+                    <button type="reset" class="btn btn-secondary">Reset all data</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
